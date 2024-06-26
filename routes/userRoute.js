@@ -48,7 +48,8 @@ const protect = asyncHandler(async (req, res, next) => {
 
 // module.exports=router;
 
-router.route("/").post(uploadImage, reasizeImage, createUser).get(getAllUser);
+router.route("/createUser").post(uploadImage, reasizeImage, createUser);
+// .get(getAllUser);
 router
   .route("/:id")
   .get(getSpecificUser)
